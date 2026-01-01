@@ -1,15 +1,14 @@
+
 from flask import Flask, render_template, request
 
-app = Flask(__name__, static_folder='asetberharga')
+app = Flask(__name__)
 
-@app.route('/')
-def index():
+@app.route('/', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        return f"Welcome, {username}!"
     return render_template('index.html')
-
-@app.route('/process', methods=['POST'])
-def process():
-    data = request.form.get('inputData')
-    return render_template('result.html', data=data)
 
 if __name__ == '__main__':
     app.run(debug=True)
