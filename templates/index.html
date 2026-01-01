@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Flask</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Form Input Data</h2>
+
+      <form action="/process" method="post">
+        <label>Input Data:</label>
+        <input type="text" name="inputData" required />
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+  </body>
+</html>
