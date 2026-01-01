@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Form Flask</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles.css') }}"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <h2>Form Input Data</h2>
 
-      <form action="/process" method="post">
-        <label>Input Data:</label>
-        <input type="text" name="inputData" required />
-        <button type="submit">Kirim</button>
-      </form>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login Form</h2>
+        <form method="post">
+            <label>Username:</label>
+            <input type="text" name="username" required>
+            <button type="submit">Login</button>
+        </form>
     </div>
-  </body>
+</body>
+
 </html>
